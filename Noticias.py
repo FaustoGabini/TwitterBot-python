@@ -4,10 +4,10 @@ from os import remove
 import tweepy
 
 # Credenciales de tweepy  
-consumer_key = "p5UMMmz7dfAUf2yXRMUlZs1Aw"
-consumer_secret = "5tcamuAy27I6TlVlwqWb32FlUoXFsKJkSepfU9XD39R1B34onb"
-access_token="1285359204648312834-cu6gm7f1loc3fttyjsNZFDKWc26DXq"
-access_token_secret="J2XSabK5vz9gB4xtccNAmGZd12FkRRIuyiB3KsPjPhmO5"
+consumer_key = "**********"
+consumer_secret = "**********"
+access_token="**********"
+access_token_secret="**********"
 
 # Obtener noticias desde Google News 
 url = ('http://newsapi.org/v2/top-headlines?'
@@ -44,7 +44,7 @@ for i in range(noticias_totales):
        try: 
               url_imagen = noticias[i]['imagen'] # El link de la imagen
               
-              nombre_local_imagen = str(i) + ".jpg" # El nombre con el que queremos guardarla
+              nombre_local_imagen = str(i) + ".jpg" # Nombre de la imagen
               imagen = requests.get(url_imagen).content
               with open(nombre_local_imagen, 'wb') as handler:
                      handler.write(imagen)
